@@ -1,0 +1,12 @@
+{
+  "id": "example-connector",
+  "kind": "plugin",
+  "name": "Example connector",
+  "version": "1",
+  "description": "A minimal plugin description to try the install flow. The connector itself runs outside (see docs/api.md).",
+  "author": "Matze89x",
+  "homepage": "https://github.com/Matze89x/ha-car-assistant/blob/main/docs/api.md",
+  "settings": [
+    { "key": "label", "label": "Label", "type": "text", "help": "Any text, only to try the settings form." }
+  ]
+}

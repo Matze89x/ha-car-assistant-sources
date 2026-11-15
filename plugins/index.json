@@ -1,0 +1,10 @@
+{
+  "packages": [
+    {
+      "id": "example-connector",
+      "name": "Example connector",
+      "description": "A minimal plugin description to try the install flow. The connector itself runs outside (see docs/api.md).",
+      "version": "1"
+    }
+  ]
+}
