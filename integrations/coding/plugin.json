@@ -2,7 +2,7 @@
   "id": "coding",
   "kind": "integration",
   "name": "Coding",
-  "version": "1",
+  "version": "2",
   "description": "Keep the coding of the control units of the car: the original value (written once) next to the current one, changed bytes marked, with notes.",
   "author": "Matze89x",
   "icon": "memory",
@@ -138,7 +138,8 @@
             }
           }
         }
-      ]
+      ],
+      "search": true
     }
   ]
 }

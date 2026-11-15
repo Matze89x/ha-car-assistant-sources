@@ -1,0 +1,89 @@
+{
+  "id": "additive",
+  "kind": "integration",
+  "name": "Fuel additive",
+  "version": "1",
+  "description": "Remember to add fuel additive: after a number of kilometres or after a number of refuels - you choose, and only if you want it.",
+  "author": "Matze89x",
+  "icon": "oil",
+  "l10n": {
+    "de": {
+      "name": "Kraftstoff-Additiv",
+      "description": "Erinnert ans Additiv: nach einer Anzahl Kilometer oder nach einer Anzahl Tankungen – du wählst, und nur, wenn du es willst."
+    }
+  },
+  "settings": [
+    {
+      "key": "mode",
+      "label": "Remind me",
+      "type": "select",
+      "default": "km",
+      "options": [
+        {
+          "value": "km",
+          "label": "after a number of kilometres"
+        },
+        {
+          "value": "refuels",
+          "label": "after a number of refuels"
+        }
+      ],
+      "help": "Without a tank level (the car does not report refuelling) kilometres fit best; if refuels are logged, counting refuels does.",
+      "l10n": {
+        "de": {
+          "label": "Erinnern",
+          "help": "Ohne Tankanzeige (das Auto meldet kein Tanken) passen Kilometer am besten; werden Tankungen erfasst, passt das Zählen der Tankungen."
+        }
+      }
+    },
+    {
+      "key": "every_km",
+      "label": "Every ... km",
+      "type": "number",
+      "default": "1000",
+      "min": 100,
+      "max": 20000,
+      "step": 100,
+      "help": "For example 1000, 2000 or 3000.",
+      "l10n": {
+        "de": {
+          "label": "Alle ... km",
+          "help": "Zum Beispiel 1000, 2000 oder 3000."
+        }
+      }
+    },
+    {
+      "key": "every_refuels",
+      "label": "After ... refuels",
+      "type": "number",
+      "default": "2",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "help": "For example 2: the reminder comes with the second refuel.",
+      "l10n": {
+        "de": {
+          "label": "Nach ... Tankungen",
+          "help": "Zum Beispiel 2: Die Erinnerung kommt bei der zweiten Tankung."
+        }
+      }
+    }
+  ],
+  "reminders": [
+    {
+      "id": "additive",
+      "title": "Add fuel additive",
+      "text_due": "Add the additive at the next refuel.",
+      "icon": "oil",
+      "mode_setting": "mode",
+      "km_setting": "every_km",
+      "refuels_setting": "every_refuels",
+      "l10n": {
+        "de": {
+          "title": "Additiv nachfüllen",
+          "text_due": "Beim nächsten Tanken Additiv zugeben."
+        }
+      }
+    }
+  ]
+}
