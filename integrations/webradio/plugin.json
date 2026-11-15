@@ -1,0 +1,80 @@
+{
+  "id": "webradio",
+  "kind": "integration",
+  "name": "Webradio",
+  "version": "1",
+  "description": "A list of web radio stations for this car: name, stream address, a second line and on/off; you set the order. A plugin of the car can read the list.",
+  "author": "Matze89x",
+  "icon": "play-circle-outline",
+  "nav": true,
+  "l10n": {
+    "de": {
+      "name": "Webradio",
+      "description": "Eine Liste von Webradio-Sendern für dieses Auto: Name, Stream-Adresse, zweite Zeile und An/Aus; die Reihenfolge bestimmst du. Ein Plugin des Autos kann die Liste lesen."
+    }
+  },
+  "pages": [
+    {
+      "id": "stations",
+      "title": "Stations",
+      "item": "Station",
+      "sortable": true,
+      "empty": "No stations yet. Add one with the plus.",
+      "l10n": {
+        "de": {
+          "title": "Sender",
+          "item": "Sender",
+          "empty": "Noch keine Sender. Füge mit dem Plus einen hinzu."
+        }
+      },
+      "fields": [
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text",
+          "required": true,
+          "role": "title",
+          "l10n": {
+            "de": {
+              "label": "Name"
+            }
+          }
+        },
+        {
+          "key": "subtitle",
+          "label": "Second line",
+          "type": "text",
+          "role": "subtitle",
+          "l10n": {
+            "de": {
+              "label": "Zweite Zeile"
+            }
+          }
+        },
+        {
+          "key": "url",
+          "label": "Stream address",
+          "type": "url",
+          "required": true,
+          "help": "The address of the stream (http or https).",
+          "l10n": {
+            "de": {
+              "label": "Stream-Adresse",
+              "help": "Die Adresse des Streams (http oder https)."
+            }
+          }
+        },
+        {
+          "key": "enabled",
+          "label": "On",
+          "type": "bool",
+          "l10n": {
+            "de": {
+              "label": "An"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

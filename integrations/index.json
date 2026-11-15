@@ -1,3 +1,16 @@
 {
-  "packages": []
+  "packages": [
+    {
+      "id": "coding",
+      "name": "Coding",
+      "description": "Coding of the control units: original next to current, changed bytes marked, notes.",
+      "version": "1"
+    },
+    {
+      "id": "webradio",
+      "name": "Webradio",
+      "description": "Web radio stations for this car: name, stream address, order, on/off.",
+      "version": "1"
+    }
+  ]
 }
