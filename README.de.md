@@ -1,5 +1,7 @@
 # Car Assistant – Quellen
 
+**Drive · Log · Go**
+
 [🇬🇧 English](README.md) · 🇩🇪 Deutsch
 
 Die Paketquelle von [Car Assistant](https://github.com/Matze89x/ha-car-assistant): die **Integrationen** und **Plugins**, die du unter *Hinzufügen* installieren kannst. Car Assistant liest dieses Repository nur, wenn du unter *Quellen* auf *Aktualisieren* tippst; gelesen werden nur Beschreibungen, ausgeführt wird nie etwas von hier.
