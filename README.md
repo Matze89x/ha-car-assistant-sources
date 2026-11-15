@@ -23,6 +23,10 @@ plugins/
 
 `plugin.json` is the description of one package (id, name, version, description, author, homepage, settings); see the format in the app's `docs/plugins.md`. The `version` in both files must be the same - a higher number than the installed one offers an **Update**.
 
+## Cars (`vehicles/`)
+
+`vehicles/index.json` lists car backups, `vehicles/<id>.zip` is one backup (made with *Vehicle data -> Back up this vehicle* in Car Assistant). They are offered under *Add vehicle* and restored like an uploaded backup. The two demo cars (`demo-diesel`, `demo-electric`) ask for the plugin `demo-connector`, which plays a made-up drive every 5 seconds (see its `simulation` part).
+
 ## Add your own package
 
 1. Create `plugins/<id>/plugin.json` (or `integrations/<id>/…`) - `<id>`: lower-case letters, digits, `-`, `_`.

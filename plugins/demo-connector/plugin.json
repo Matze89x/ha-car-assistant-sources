@@ -1,0 +1,33 @@
+{
+  "id": "demo-connector",
+  "kind": "plugin",
+  "name": "Demo connector",
+  "version": "1",
+  "description": "Plays a made-up drive for a demo car: it parks, gets in, drives (the position moves, the level changes), stops and gets out, sometimes with a fault - one report every 5 seconds through the normal interface, like a real connected car. Switch it off (Start / Stop) and the car stands still.",
+  "author": "Matze89x",
+  "homepage": "",
+  "settings": [],
+  "simulation": {
+    "interval_s": 5,
+    "timelapse": 12,
+    "places": [
+      { "name": "Home", "lat": 52.5200, "lon": 13.4050 },
+      { "name": "Office", "lat": 52.5008, "lon": 13.4380 },
+      { "name": "Supermarket", "lat": 52.5120, "lon": 13.3890 },
+      { "name": "Lake", "lat": 52.4350, "lon": 13.6430 },
+      { "name": "Airport", "lat": 52.3667, "lon": 13.5033 },
+      { "name": "Garden centre", "lat": 52.5560, "lon": 13.3250 },
+      { "name": "Sports club", "lat": 52.4870, "lon": 13.3540 }
+    ],
+    "cycle": [["parked", 3], ["enter", 1], ["start", 1], ["drive", 8], ["stop", 1], ["leave", 1]],
+    "fuel": { "pct_per_km": 0.1, "km_per_pct": 10 },
+    "electric": { "pct_per_km": 0.27, "km_per_pct": 5.2, "charge_below_pct": 40, "charge_step_pct": 9, "charge_limit_pct": 80, "charge_kw": 11 },
+    "warnings": [
+      { "code": "tyre_pressure_fl", "text": "Tyre pressure front left low" },
+      { "code": "washer_fluid", "text": "Washer fluid low" },
+      { "code": "brake_pads", "text": "Brake pads worn - see a workshop" },
+      { "code": "battery_12v", "text": "12 V battery voltage low" },
+      { "code": "engine_check", "text": "Engine fault - drive to a workshop" }
+    ]
+  }
+}

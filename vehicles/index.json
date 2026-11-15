@@ -1,0 +1,6 @@
+{
+  "vehicles": [
+    { "id": "demo-diesel", "name": "Demo Diesel", "description": "An example diesel car with two years of made-up data in every area.", "file": "demo-diesel.zip" },
+    { "id": "demo-electric", "name": "Demo Electric", "description": "An example electric car with two years of made-up data in every area.", "file": "demo-electric.zip" }
+  ]
+}

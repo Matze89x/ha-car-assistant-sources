@@ -23,6 +23,10 @@ plugins/
 
 `plugin.json` ist die Beschreibung eines Pakets (id, name, version, description, author, homepage, settings); das Format steht in der `docs/plugins.de.md` der App. Die `version` muss in beiden Dateien gleich sein – eine höhere Zahl als die installierte bietet ein **Update** an.
 
+## Autos (`vehicles/`)
+
+`vehicles/index.json` listet Fahrzeug-Sicherungen, `vehicles/<id>.zip` ist eine Sicherung (gemacht mit *Fahrzeugdaten → Dieses Fahrzeug sichern* in Car Assistant). Sie werden unter *Fahrzeug hinzufügen* angeboten und wie eine hochgeladene Sicherung wiederhergestellt. Die zwei Demo-Autos (`demo-diesel`, `demo-electric`) verlangen das Plugin `demo-connector`, das alle 5 Sekunden eine erfundene Fahrt abspielt (siehe seinen Teil `simulation`).
+
 ## Eigenes Paket hinzufügen
 
 1. `plugins/<id>/plugin.json` anlegen (oder `integrations/<id>/…`) – `<id>`: Kleinbuchstaben, Ziffern, `-`, `_`.
