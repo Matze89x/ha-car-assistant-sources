@@ -2,7 +2,7 @@
   "id": "coding",
   "kind": "integration",
   "name": "Coding",
-  "version": "2",
+  "version": "3",
   "description": "Keep the coding of the control units of the car: the original value (written once) next to the current one, changed bytes marked, with notes.",
   "author": "Matze89x",
   "icon": "memory",
@@ -140,6 +140,21 @@
         }
       ],
       "search": true
+    }
+  ],
+  "docs": "Keeps the coding of the car's control units: for each unit the original value (fixed once written) next to the current one, changed bytes marked, bits viewable, notes. Entries are written by hand or delivered by a plugin that reads the car.",
+  "interfaces": [
+    {
+      "direction": "offers",
+      "name": "Control units (read)",
+      "path": "/api/v1/vehicles/<id>/modules/coding/units",
+      "note": "GET: the entries in their order, as plain values"
+    },
+    {
+      "direction": "offers",
+      "name": "Control units (write)",
+      "path": "/api/v1/vehicles/<id>/modules/coding/units",
+      "note": "POST: a plugin may add, change and delete entries; fields marked once keep their first value"
     }
   ]
 }

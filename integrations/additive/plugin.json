@@ -2,7 +2,7 @@
   "id": "additive",
   "kind": "integration",
   "name": "Fuel additive",
-  "version": "1",
+  "version": "2",
   "description": "Remember to add fuel additive: after a number of kilometres or after a number of refuels - you choose, and only if you want it.",
   "author": "Matze89x",
   "icon": "oil",
@@ -85,5 +85,6 @@
         }
       }
     }
-  ]
+  ],
+  "docs": "Reminds you to add fuel additive after a number of kilometres or refuels (default every 1000 km; 2000 or 3000 can be chosen). Optional and off by default. Shows on Home and the fuel page; a refuel can also count."
 }

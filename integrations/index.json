@@ -4,19 +4,22 @@
       "id": "coding",
       "name": "Coding",
       "description": "Coding of the control units: original next to current, changed bytes marked, notes.",
-      "version": "2"
+      "version": "3",
+      "icon": "memory"
     },
     {
       "id": "webradio",
       "name": "Webradio",
       "description": "Web radio stations for this car: name, stream address, order, on/off.",
-      "version": "2"
+      "version": "3",
+      "icon": "play-circle-outline"
     },
     {
       "id": "additive",
       "name": "Fuel additive",
       "description": "Reminder to add fuel additive: after a number of kilometres or refuels, optional.",
-      "version": "1"
+      "version": "2",
+      "icon": "oil"
     }
   ]
 }

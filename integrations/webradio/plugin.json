@@ -2,7 +2,7 @@
   "id": "webradio",
   "kind": "integration",
   "name": "Webradio",
-  "version": "2",
+  "version": "3",
   "description": "A list of web radio stations for this car: name, stream address, a second line and on/off; you set the order. A plugin of the car can read the list.",
   "author": "Matze89x",
   "icon": "play-circle-outline",
@@ -76,6 +76,15 @@
         }
       ],
       "search": true
+    }
+  ],
+  "docs": "The list of web radio stations for this car: name, stream address, order, on/off. The list is only kept here; a plugin (for example the one that talks to the car's head unit) reads it and plays the stations.",
+  "interfaces": [
+    {
+      "direction": "offers",
+      "name": "Stations (read)",
+      "path": "/api/v1/vehicles/<id>/modules/webradio/stations",
+      "note": "GET: the stations in their order; a plugin fetches the list and passes it to the device"
     }
   ]
 }
