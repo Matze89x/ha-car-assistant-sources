@@ -2,11 +2,152 @@
   "id": "example-connector",
   "kind": "plugin",
   "name": "Example connector",
-  "version": "1",
+  "version": "2",
   "description": "A minimal plugin description to try the install flow. The connector itself runs outside (see docs/api.md).",
   "author": "Matze89x",
   "homepage": "https://github.com/Matze89x/ha-car-assistant/blob/main/docs/api.md",
   "settings": [
-    { "key": "label", "label": "Label", "type": "text", "help": "Any text, only to try the settings form." }
-  ]
+    {
+      "type": "section",
+      "label": "Basics",
+      "help": "Every kind of field the settings page can draw.",
+      "l10n": {
+        "de": {
+          "label": "Grundlagen",
+          "help": "Jede Art von Feld, die die Einstellungsseite zeichnen kann."
+        }
+      }
+    },
+    {
+      "key": "label",
+      "label": "Label",
+      "type": "text",
+      "help": "Any text.",
+      "placeholder": "My car",
+      "l10n": {
+        "de": {
+          "label": "Bezeichnung",
+          "help": "Ein beliebiger Text."
+        }
+      }
+    },
+    {
+      "key": "enabled",
+      "label": "Switched on",
+      "type": "bool",
+      "default": "1",
+      "l10n": {
+        "de": {
+          "label": "Eingeschaltet"
+        }
+      }
+    },
+    {
+      "key": "mode",
+      "label": "Mode",
+      "type": "radio",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Automatic"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
+        }
+      ],
+      "default": "auto",
+      "l10n": {
+        "de": {
+          "label": "Modus"
+        }
+      }
+    },
+    {
+      "key": "address",
+      "label": "Address",
+      "type": "url",
+      "show_if": {
+        "key": "mode",
+        "equals": "custom"
+      },
+      "help": "Only shown in custom mode.",
+      "l10n": {
+        "de": {
+          "label": "Adresse",
+          "help": "Nur im eigenen Modus sichtbar."
+        }
+      }
+    },
+    {
+      "key": "volume",
+      "label": "Volume",
+      "type": "slider",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": "50",
+      "l10n": {
+        "de": {
+          "label": "Lautstärke"
+        }
+      }
+    },
+    {
+      "key": "features",
+      "label": "Features",
+      "type": "multiselect",
+      "options": [
+        {
+          "value": "news",
+          "label": "News"
+        },
+        {
+          "value": "weather",
+          "label": "Weather"
+        },
+        {
+          "value": "traffic",
+          "label": "Traffic"
+        }
+      ],
+      "l10n": {
+        "de": {
+          "label": "Funktionen"
+        }
+      }
+    },
+    {
+      "key": "stations",
+      "label": "Stations",
+      "type": "list",
+      "name_label": "Name",
+      "value_label": "Address",
+      "l10n": {
+        "de": {
+          "label": "Sender"
+        }
+      }
+    },
+    {
+      "type": "info",
+      "label": "Note",
+      "help": "Nothing here is sent anywhere: this is only a form to try.",
+      "l10n": {
+        "de": {
+          "label": "Hinweis",
+          "help": "Nichts hiervon wird irgendwohin gesendet: Es ist nur ein Formular zum Ausprobieren."
+        }
+      }
+    }
+  ],
+  "icon": "plug",
+  "l10n": {
+    "de": {
+      "name": "Beispiel-Anbindung",
+      "description": "Eine minimale Plugin-Beschreibung, um die Installation auszuprobieren. Die Anbindung selbst läuft außerhalb (siehe docs/api.de.md)."
+    }
+  },
+  "docs": "A minimal example of a plugin description. It has no service and sends nothing by itself: it only shows what a plugin.json looks like and how the settings page draws the different kinds of fields (switch, choice, slider, ticks, list, heading, text). Copy it as a start for your own plugin: docs/plugin-guide.md."
 }

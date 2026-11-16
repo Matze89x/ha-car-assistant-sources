@@ -4,13 +4,15 @@
       "id": "demo-connector",
       "name": "Demo connector",
       "description": "Plays a made-up drive for a demo car, once every 5 seconds, through the normal interface.",
-      "version": "1"
+      "version": "2",
+      "icon": "car-side"
     },
     {
       "id": "example-connector",
       "name": "Example connector",
       "description": "A minimal plugin description to try the install flow. The connector itself runs outside (see docs/api.md).",
-      "version": "1"
+      "version": "2",
+      "icon": "plug"
     }
   ]
 }

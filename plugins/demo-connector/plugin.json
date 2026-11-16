@@ -2,7 +2,7 @@
   "id": "demo-connector",
   "kind": "plugin",
   "name": "Demo connector",
-  "version": "1",
+  "version": "2",
   "description": "Plays a made-up drive for a demo car: it parks, gets in, drives (the position moves, the level changes), stops and gets out, sometimes with a fault - one report every 5 seconds through the normal interface, like a real connected car. Switch it off (Start / Stop) and the car stands still.",
   "author": "Matze89x",
   "homepage": "",
@@ -11,23 +11,137 @@
     "interval_s": 5,
     "timelapse": 12,
     "places": [
-      { "name": "Home", "lat": 52.5200, "lon": 13.4050 },
-      { "name": "Office", "lat": 52.5008, "lon": 13.4380 },
-      { "name": "Supermarket", "lat": 52.5120, "lon": 13.3890 },
-      { "name": "Lake", "lat": 52.4350, "lon": 13.6430 },
-      { "name": "Airport", "lat": 52.3667, "lon": 13.5033 },
-      { "name": "Garden centre", "lat": 52.5560, "lon": 13.3250 },
-      { "name": "Sports club", "lat": 52.4870, "lon": 13.3540 }
+      {
+        "name": "Home",
+        "lat": 52.52,
+        "lon": 13.405
+      },
+      {
+        "name": "Office",
+        "lat": 52.5008,
+        "lon": 13.438
+      },
+      {
+        "name": "Supermarket",
+        "lat": 52.512,
+        "lon": 13.389
+      },
+      {
+        "name": "Lake",
+        "lat": 52.435,
+        "lon": 13.643
+      },
+      {
+        "name": "Airport",
+        "lat": 52.3667,
+        "lon": 13.5033
+      },
+      {
+        "name": "Garden centre",
+        "lat": 52.556,
+        "lon": 13.325
+      },
+      {
+        "name": "Sports club",
+        "lat": 52.487,
+        "lon": 13.354
+      }
     ],
-    "cycle": [["parked", 3], ["enter", 1], ["start", 1], ["drive", 8], ["stop", 1], ["leave", 1]],
-    "fuel": { "pct_per_km": 0.1, "km_per_pct": 10 },
-    "electric": { "pct_per_km": 0.27, "km_per_pct": 5.2, "charge_below_pct": 40, "charge_step_pct": 9, "charge_limit_pct": 80, "charge_kw": 11 },
+    "cycle": [
+      [
+        "parked",
+        3
+      ],
+      [
+        "enter",
+        1
+      ],
+      [
+        "start",
+        1
+      ],
+      [
+        "drive",
+        8
+      ],
+      [
+        "stop",
+        1
+      ],
+      [
+        "leave",
+        1
+      ]
+    ],
+    "fuel": {
+      "pct_per_km": 0.1,
+      "km_per_pct": 10
+    },
+    "electric": {
+      "pct_per_km": 0.27,
+      "km_per_pct": 5.2,
+      "charge_below_pct": 40,
+      "charge_step_pct": 9,
+      "charge_limit_pct": 80,
+      "charge_kw": 11
+    },
     "warnings": [
-      { "code": "tyre_pressure_fl", "text": "Tyre pressure front left low" },
-      { "code": "washer_fluid", "text": "Washer fluid low" },
-      { "code": "brake_pads", "text": "Brake pads worn - see a workshop" },
-      { "code": "battery_12v", "text": "12 V battery voltage low" },
-      { "code": "engine_check", "text": "Engine fault - drive to a workshop" }
+      {
+        "code": "tyre_pressure_fl",
+        "text": "Tyre pressure front left low"
+      },
+      {
+        "code": "washer_fluid",
+        "text": "Washer fluid low"
+      },
+      {
+        "code": "brake_pads",
+        "text": "Brake pads worn - see a workshop"
+      },
+      {
+        "code": "battery_12v",
+        "text": "12 V battery voltage low"
+      },
+      {
+        "code": "engine_check",
+        "text": "Engine fault - drive to a workshop"
+      }
     ]
-  }
+  },
+  "icon": "car-side",
+  "l10n": {
+    "de": {
+      "name": "Demo-Anbindung",
+      "description": "Spielt für ein Demo-Auto eine ausgedachte Fahrt ab, alle 5 Sekunden, über die normale Schnittstelle."
+    }
+  },
+  "docs": "A demo plugin: it plays a made-up drive (parked, enter, start, drive, stop, leave) for a demo car and delivers the values through the normal Connector API, exactly like a real connection would. It needs no device and no settings. Start and stop it with the buttons on its tile. Look at the page Interfaces after a few minutes to see what it really sent.",
+  "interfaces": [
+    {
+      "direction": "sends",
+      "name": "Vehicle data",
+      "path": "/api/v1/vehicles/<id>/data",
+      "fields": [
+        "odometer_km",
+        "position",
+        "speed_kmh",
+        "ignition",
+        "doors",
+        "windows",
+        "locked",
+        "fuel_level_pct",
+        "range_km",
+        "battery_12v_v",
+        "tyre_pressure_bar",
+        "warnings"
+      ],
+      "note": "every 5 seconds while it runs"
+    },
+    {
+      "direction": "reads",
+      "name": "Control",
+      "path": "/api/v1/vehicles/<id>/control",
+      "note": "the debug switch and the reporting interval come back in every answer"
+    }
+  ]
 }
