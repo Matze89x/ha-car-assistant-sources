@@ -4,7 +4,7 @@
       "id": "coding",
       "name": "Coding",
       "description": "Coding of the control units: original next to current, changed bytes marked, notes.",
-      "version": "3",
+      "version": "4",
       "icon": "memory"
     },
     {
@@ -17,8 +17,8 @@
     {
       "id": "additive",
       "name": "Fuel additive",
-      "description": "Reminder to add fuel additive: after a number of kilometres or refuels, optional.",
-      "version": "2",
+      "description": "An additive plan for the fuel: a rotation that moves on with every refuel (for example clean - additive 1 - clean - additive 2), a reminder when the range gets low, and a history. Optional, off until you set it up.",
+      "version": "3",
       "icon": "oil"
     }
   ]
