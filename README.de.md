@@ -8,7 +8,7 @@ Die Paketquelle von [Car Assistant](https://github.com/Matze89x/ha-car-assistant
 
 ## Was hier drin ist
 - **Integrationen** (kein Programm, nur eine Beschreibung, die die App zeichnet): *Kraftstoff-Additiv* – ein Additiv-Plan, der mit jeder Tankung weiterrückt, mit Erinnerung und Verlauf; *Coding* – die Codierung der Steuergeräte, Original neben aktuell, geänderte Bytes markiert; *Webradio* – eine Senderliste.
-- **Plugins** (Verbindungen nach außen): *Demo connector* spielt eine erfundene Fahrt ab; *Example connector* zeigt jede Art von Einstellungsfeld.
+- **Plugins** (Verbindungen nach außen): *Demo connector* spielt eine erfundene Fahrt ab.
 - **Autos**: die beiden Demo-Autos kommen mit erfundenen Daten in jedem Modul – auch Ausstattung in allen zwölf Bereichen mit jedem Status, Luftdruck (normal und voll beladen), einer eigenen Hinterachse, Widgets (*Aufmerksamkeit*, *Fahrzeugdaten* und *Standort* als ganze Zeile) und einem eigenen Icon.
 
 ## Aufbau (die feste Regel)
