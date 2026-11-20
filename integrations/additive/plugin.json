@@ -1,14 +1,14 @@
 {
   "id": "additive",
   "kind": "integration",
-  "name": "Fuel additive",
-  "version": "3",
+  "name": "Additive",
+  "version": "4",
   "description": "An additive plan for the fuel: a rotation that moves on with every refuel (for example clean - additive 1 - clean - additive 2), a reminder when the range gets low, and a history. Optional, off until you set it up.",
   "author": "Matze89x",
   "icon": "oil",
   "l10n": {
     "de": {
-      "name": "Kraftstoff-Additiv",
+      "name": "Additivzusatz",
       "description": "Ein Additiv-Plan für den Kraftstoff: ein Wechsel, der mit jeder Tankung weiterrückt (zum Beispiel sauber – Additiv 1 – sauber – Additiv 2), eine Erinnerung, wenn die Reichweite knapp wird, und ein Verlauf. Freiwillig, aus, bis du ihn einrichtest."
     }
   },
@@ -107,7 +107,7 @@
   "reminders": [
     {
       "id": "additive",
-      "title": "Fuel additive",
+      "title": "Additive",
       "text_due": "Add the additive at the next refuel.",
       "icon": "oil",
       "active_setting": "active",
@@ -152,7 +152,7 @@
       ],
       "l10n": {
         "de": {
-          "title": "Additiv",
+          "title": "Additivzusatz",
           "text_due": "Beim nächsten Tanken Additiv zugeben."
         }
       }
