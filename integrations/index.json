@@ -3,8 +3,8 @@
     {
       "id": "coding",
       "name": "Coding",
-      "description": "Coding of the control units: original next to current, changed bytes marked, notes.",
-      "version": "4",
+      "description": "Coding of the control units: original next to current, changed bytes marked, notes, an access code per unit and a history.",
+      "version": "5",
       "icon": "memory"
     },
     {

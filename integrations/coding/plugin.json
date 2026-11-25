@@ -2,15 +2,15 @@
   "id": "coding",
   "kind": "integration",
   "name": "Coding",
-  "version": "4",
-  "description": "Keep the coding of the control units of the car: the original value (written once) next to the current one, changed bytes marked, with notes.",
+  "version": "5",
+  "description": "Keep the coding of the control units of the car: the original value (written once) next to the current one, changed bytes marked, with notes. With an access code per control unit and a history of changes.",
   "author": "Matze89x",
   "icon": "memory",
   "nav": true,
   "l10n": {
     "de": {
       "name": "Coding",
-      "description": "Die Codierung der Steuergeräte des Autos festhalten: der Originalwert (einmal geschrieben) neben dem aktuellen, geänderte Bytes markiert, mit Notizen."
+      "description": "Die Codierung der Steuergeräte des Autos festhalten: der Originalwert (einmal geschrieben) neben dem aktuellen, geänderte Bytes markiert, mit Notizen. Mit Zugangscode je Steuergerät und einem Verlauf der Änderungen."
     }
   },
   "pages": [
@@ -137,9 +137,109 @@
               "label": "Anpassungen und Notizen"
             }
           }
+        },
+        {
+          "key": "access_code",
+          "label": "Access code",
+          "type": "secret",
+          "help": "Log-in or unlock code of the control unit. Hidden until you press Show.",
+          "l10n": {
+            "de": {
+              "label": "Zugangscode",
+              "help": "Anmelde- oder Entsperrcode des Steuergeräts. Verborgen, bis du Anzeigen drückst."
+            }
+          }
         }
       ],
       "search": true
+    },
+    {
+      "id": "history",
+      "title": "History",
+      "item": "Change",
+      "empty": "No changes yet. Add one with the plus.",
+      "order": {
+        "by": "date",
+        "dir": "desc"
+      },
+      "search": true,
+      "l10n": {
+        "de": {
+          "title": "Verlauf",
+          "item": "Änderung",
+          "empty": "Noch keine Änderungen. Füge mit dem Plus eine hinzu."
+        }
+      },
+      "fields": [
+        {
+          "key": "date",
+          "label": "Date",
+          "type": "date",
+          "required": true,
+          "role": "subtitle",
+          "l10n": {
+            "de": {
+              "label": "Datum"
+            }
+          }
+        },
+        {
+          "key": "unit",
+          "label": "Control unit",
+          "type": "text",
+          "required": true,
+          "role": "subtitle",
+          "help": "For example 09 Central electrics",
+          "l10n": {
+            "de": {
+              "label": "Steuergerät",
+              "help": "Zum Beispiel 09 Zentralelektrik"
+            }
+          }
+        },
+        {
+          "key": "what",
+          "label": "What was changed",
+          "type": "text",
+          "required": true,
+          "role": "title",
+          "l10n": {
+            "de": {
+              "label": "Was geändert wurde"
+            }
+          }
+        },
+        {
+          "key": "old",
+          "label": "Old value",
+          "type": "text",
+          "l10n": {
+            "de": {
+              "label": "Alter Wert"
+            }
+          }
+        },
+        {
+          "key": "new",
+          "label": "New value",
+          "type": "text",
+          "l10n": {
+            "de": {
+              "label": "Neuer Wert"
+            }
+          }
+        },
+        {
+          "key": "note",
+          "label": "Note",
+          "type": "textarea",
+          "l10n": {
+            "de": {
+              "label": "Notiz"
+            }
+          }
+        }
+      ]
     }
   ],
   "docs": "Keeps the coding of the car's control units: for each unit the original value (fixed once written) next to the current one, changed bytes marked, bits viewable, notes. Entries are written by hand or delivered by a plugin that reads the car. Every control unit is a collapsible row (address badge, name, changed bytes); the byte grid, the new value and the notes are edited right there, 'New = original' resets the current value.",
