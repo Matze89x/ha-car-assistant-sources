@@ -2,15 +2,15 @@
   "id": "coding",
   "kind": "integration",
   "name": "Coding",
-  "version": "5",
-  "description": "Keep the coding of the control units of the car: the original value (written once) next to the current one, changed bytes marked, with notes. With an access code per control unit and a history of changes.",
+  "version": "6",
+  "description": "Keep the coding of the control units of the car: the factory value (written once) next to the current one, changed bytes marked, with notes. With an access code per control unit and a history of changes.",
   "author": "Matze89x",
   "icon": "memory",
   "nav": true,
   "l10n": {
     "de": {
       "name": "Coding",
-      "description": "Die Codierung der Steuergeräte des Autos festhalten: der Originalwert (einmal geschrieben) neben dem aktuellen, geänderte Bytes markiert, mit Notizen. Mit Zugangscode je Steuergerät und einem Verlauf der Änderungen."
+      "description": "Die Codierung der Steuergeräte des Autos festhalten: der Werkswert (einmal geschrieben) neben dem aktuellen, geänderte Bytes markiert, mit Notizen. Mit Zugangscode je Steuergerät und einem Verlauf der Änderungen."
     }
   },
   "pages": [
@@ -96,13 +96,13 @@
         },
         {
           "key": "coding_old",
-          "label": "Original coding (hex)",
+          "label": "Factory coding (hex)",
           "type": "hex",
           "once": true,
           "help": "Written once, then fixed.",
           "l10n": {
             "de": {
-              "label": "Original-Codierung (Hex)",
+              "label": "Werks-Codierung (Hex)",
               "help": "Wird einmal geschrieben, danach fest."
             }
           }
@@ -242,7 +242,7 @@
       ]
     }
   ],
-  "docs": "Keeps the coding of the car's control units: for each unit the original value (fixed once written) next to the current one, changed bytes marked, bits viewable, notes. Entries are written by hand or delivered by a plugin that reads the car. Every control unit is a collapsible row (address badge, name, changed bytes); the byte grid, the new value and the notes are edited right there, 'New = original' resets the current value.",
+  "docs": "Keeps the coding of the car's control units: for each unit the factory value (fixed once written) next to the current one, changed bytes marked, bits viewable, notes. Entries are written by hand or delivered by a plugin that reads the car. Every control unit is a collapsible row (address badge, name, changed bytes); the byte grid, the new value and the notes are edited right there, 'New = factory' puts the factory value into the current coding (saved with Save).",
   "interfaces": [
     {
       "direction": "offers",
