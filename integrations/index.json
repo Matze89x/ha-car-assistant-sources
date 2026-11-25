@@ -8,13 +8,6 @@
       "icon": "memory"
     },
     {
-      "id": "webradio",
-      "name": "Webradio",
-      "description": "Web radio stations for this car: name, stream address, order, on/off.",
-      "version": "3",
-      "icon": "play-circle-outline"
-    },
-    {
       "id": "additive",
       "name": "Additive",
       "description": "An additive plan for the fuel: a rotation that moves on with every refuel (for example clean - additive 1 - clean - additive 2), a reminder when the range gets low, and a history. Optional, off until you set it up.",
