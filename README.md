@@ -8,7 +8,7 @@ The package source of [Car Assistant](https://github.com/Matze89x/ha-car-assista
 
 ## What is in here
 - **Integrations** (no program, only a description the app draws): *Fuel additive* - an additive plan that moves on with every refuel, with a reminder and a history; *Coding* - the coding of the control units, factory value next to current, changed bytes marked.
-- **Plugins** (connections to the outside): *Demo connector* plays a made-up drive.
+- **Plugins** (connections to the outside): *Demo connector* plays a made-up drive; *Home Assistant* brings entities of your Home Assistant - a wallbox, a tracker, the integration of your car - into a car, for each car on its own, live (needs Car Assistant 0.5.37 or newer).
 - **Cars**: the two demo cars come with made-up data in every module - also equipment in all twelve areas with every status, tyre pressures (normal and loaded), a separate rear axle, widgets (*Attention*, *Vehicle data* and *Position* as a full row) and an icon of their own.
 
 ## Layout (the fixed rule)

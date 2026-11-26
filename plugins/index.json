@@ -6,6 +6,13 @@
       "description": "Plays a made-up drive for a demo car, once every 5 seconds, through the normal interface.",
       "version": "2",
       "icon": "car-side"
+    },
+    {
+      "id": "home-assistant",
+      "name": "Home Assistant",
+      "description": "Brings entities of your Home Assistant into a car - a wallbox, a tracker, the integration of your car - for each car on its own, live, with units converted. Needs Car Assistant 0.5.37 or newer.",
+      "version": "1.0.0",
+      "icon": "home"
     }
   ]
 }

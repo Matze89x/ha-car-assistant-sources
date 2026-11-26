@@ -1,0 +1,37 @@
+{
+  "id": "home-assistant",
+  "kind": "plugin",
+  "name": "Home Assistant",
+  "version": "1.0.0",
+  "author": "Matze89x",
+  "homepage": "",
+  "icon": "home",
+  "description": "Brings entities of your Home Assistant into Car Assistant, for every car on its own: the integration of your car, a wallbox, a tracker, a sensor. You choose the entity for each interface; units are converted and changes arrive at once. Needs Car Assistant 0.5.37 or newer.",
+  "l10n": {
+    "de": {
+      "description": "Bringt Entitäten aus deinem Home Assistant in Car Assistant, für jedes Fahrzeug einzeln: die Integration deines Autos, eine Wallbox, einen Tracker, einen Sensor. Du wählst für jede Schnittstelle die Entität; Einheiten werden umgerechnet, Änderungen kommen sofort an. Braucht Car Assistant ab Version 0.5.37."
+    }
+  },
+  "bridge": { "type": "home_assistant" },
+  "settings": [
+    {
+      "key": "every",
+      "type": "select",
+      "label": "Look at least every",
+      "default": "30",
+      "help": "A change arrives at once while the live connection to Home Assistant stands. This is how often Home Assistant is asked besides (and always when there is no live connection).",
+      "options": [
+        { "value": "10", "label": "10 s" },
+        { "value": "30", "label": "30 s" },
+        { "value": "60", "label": "1 min" },
+        { "value": "300", "label": "5 min" }
+      ],
+      "l10n": {
+        "de": {
+          "label": "Mindestens nachsehen alle",
+          "help": "Eine Änderung kommt sofort an, solange die Live-Verbindung zu Home Assistant steht. So oft wird Home Assistant zusätzlich gefragt (und immer, wenn es keine Live-Verbindung gibt)."
+        }
+      }
+    }
+  ]
+}
